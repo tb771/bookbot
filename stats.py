@@ -14,3 +14,10 @@ def get_character(book_contents):
 			count[total]=1
 	return count
 
+def sort_on(items):
+	return items[1]["num"]
+
+def sort_dict(count):
+	items = [{"char": char, "num": num} for (char, num) in count.items()]
+	items.sort(reverse=True, key=lambda d: d["num"])
+	return items
